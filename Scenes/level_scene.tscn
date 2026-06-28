@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://cfcwfs3n2sg2j"]
+
+[node name="LevelScreen" type="Node2D" unique_id=1448127940]
+position = Vector2(1, 1)

@@ -1,0 +1,62 @@
+[gd_scene format=3 uid="uid://c8wvsi2ft8xgx"]
+
+[ext_resource type="Script" uid="uid://gjwtmig8u8si" path="res://Scenes/title_scene.gd" id="1_68ljo"]
+
+[sub_resource type="Gradient" id="Gradient_j1uka"]
+interpolation_mode = 1
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0.908556, 0.8483721, 0.45921195, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_glrdp"]
+gradient = SubResource("Gradient_j1uka")
+
+[node name="TitleScreen" type="Node2D" unique_id=1678468492]
+script = ExtResource("1_68ljo")
+
+[node name="Background" type="TextureRect" parent="." unique_id=1793147251]
+offset_top = -2.9999833
+offset_right = 670.72784
+offset_bottom = 515.05804
+scale = Vector2(1.7160462, 1.2624067)
+texture = SubResource("GradientTexture1D_glrdp")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=2069108597]
+clip_contents = false
+offset_left = 205.0
+offset_top = 49.0
+offset_right = 802.9866
+offset_bottom = 193.16599
+scale = Vector2(1.2274523, 1.2832152)
+theme_override_constants/outline_size = 40
+theme_override_font_sizes/normal_font_size = 108
+text = "WarioWare"
+scroll_active = false
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1976641583]
+offset_left = 475.0
+offset_top = 259.0
+offset_right = 676.0
+offset_bottom = 556.0
+
+[node name="Start" type="Button" parent="VBoxContainer" unique_id=1008455495]
+layout_mode = 2
+theme_override_constants/outline_size = 14
+theme_override_font_sizes/font_size = 26
+text = "Start"
+
+[node name="Settings" type="Button" parent="VBoxContainer" unique_id=1935232257]
+layout_mode = 2
+theme_override_constants/outline_size = 14
+theme_override_font_sizes/font_size = 26
+text = "Settings
+"
+
+[node name="Quit" type="Button" parent="VBoxContainer" unique_id=424268463]
+layout_mode = 2
+theme_override_constants/outline_size = 14
+theme_override_font_sizes/font_size = 26
+text = "Quit"
+
+[connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="VBoxContainer/Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_quit_pressed"]
