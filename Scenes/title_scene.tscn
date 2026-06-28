@@ -2,13 +2,13 @@
 
 [ext_resource type="Script" uid="uid://gjwtmig8u8si" path="res://Scenes/title_scene.gd" id="1_68ljo"]
 
-[sub_resource type="Gradient" id="Gradient_j1uka"]
+[sub_resource type="Gradient" id="Gradient_68ljo"]
 interpolation_mode = 1
 offsets = PackedFloat32Array(0)
 colors = PackedColorArray(0.908556, 0.8483721, 0.45921195, 1)
 
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_glrdp"]
-gradient = SubResource("Gradient_j1uka")
+gradient = SubResource("Gradient_68ljo")
 
 [node name="TitleScreen" type="Node2D" unique_id=1678468492]
 script = ExtResource("1_68ljo")
