@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cfcwfs3n2sg2j"]
 
-[ext_resource type="Texture2D" uid="uid://dmxonpvq2xm8" path="res://icon.svg" id="1_rol8n"]
+[ext_resource type="Script" uid="uid://cwx1b3n87q82w" path="res://Scenes/timer_screen.gd" id="1_cn3xy"]
+[ext_resource type="Texture2D" uid="uid://dgrp2frawb6js" path="res://Assets/garlic-icon.svg" id="2_c7xwe"]
 
 [sub_resource type="Gradient" id="Gradient_j1uka"]
 interpolation_mode = 1
@@ -11,7 +12,7 @@ colors = PackedColorArray(0.908556, 0.8483721, 0.45921195, 1)
 gradient = SubResource("Gradient_j1uka")
 
 [node name="LevelScreen" type="Node2D" unique_id=1448127940]
-position = Vector2(1, 1)
+script = ExtResource("1_cn3xy")
 
 [node name="Background" type="TextureRect" parent="." unique_id=1267787632]
 offset_top = -2.9999833
@@ -19,34 +20,6 @@ offset_right = 670.72784
 offset_bottom = 515.05804
 scale = Vector2(1.7160462, 1.2624067)
 texture = SubResource("GradientTexture1D_cn3xy")
-
-[node name="GarlicContainer" type="HBoxContainer" parent="Background" unique_id=981153489]
-layout_mode = 0
-offset_left = 103.726814
-offset_top = 72.08452
-offset_right = 759.7268
-offset_bottom = 200.08453
-scale = Vector2(0.68552214, 1.01307)
-
-[node name="Garlic" type="TextureRect" parent="Background/GarlicContainer" unique_id=298342562]
-layout_mode = 2
-texture = ExtResource("1_rol8n")
-
-[node name="Garlic2" type="TextureRect" parent="Background/GarlicContainer" unique_id=347055575]
-layout_mode = 2
-texture = ExtResource("1_rol8n")
-
-[node name="Garlic3" type="TextureRect" parent="Background/GarlicContainer" unique_id=278930772]
-layout_mode = 2
-texture = ExtResource("1_rol8n")
-
-[node name="Garlic4" type="TextureRect" parent="Background/GarlicContainer" unique_id=1555667324]
-layout_mode = 2
-texture = ExtResource("1_rol8n")
-
-[node name="Garlic5" type="TextureRect" parent="Background/GarlicContainer" unique_id=864410363]
-layout_mode = 2
-texture = ExtResource("1_rol8n")
 
 [node name="Level" type="RichTextLabel" parent="." unique_id=1356129776]
 clip_contents = false
@@ -59,10 +32,37 @@ theme_override_font_sizes/normal_font_size = 38
 text = "Level #"
 
 [node name="Timer" type="RichTextLabel" parent="." unique_id=497848961]
-offset_left = 521.0
-offset_top = 435.0
-offset_right = 665.0119
-offset_bottom = 499.02792
+offset_left = 526.0
+offset_top = 432.0
+offset_right = 670.0119
+offset_bottom = 496.02792
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/normal_font_size = 38
 text = "0.0"
+
+[node name="GarlicContainer" type="HBoxContainer" parent="." unique_id=981153489]
+offset_left = 356.0
+offset_top = 102.0
+offset_right = 958.69244
+offset_bottom = 230.00002
+scale = Vector2(0.68552214, 1.01307)
+
+[node name="Garlic" type="TextureRect" parent="GarlicContainer" unique_id=298342562]
+layout_mode = 2
+texture = ExtResource("2_c7xwe")
+
+[node name="Garlic2" type="TextureRect" parent="GarlicContainer" unique_id=347055575]
+layout_mode = 2
+texture = ExtResource("2_c7xwe")
+
+[node name="Garlic3" type="TextureRect" parent="GarlicContainer" unique_id=278930772]
+layout_mode = 2
+texture = ExtResource("2_c7xwe")
+
+[node name="Garlic4" type="TextureRect" parent="GarlicContainer" unique_id=1555667324]
+layout_mode = 2
+texture = ExtResource("2_c7xwe")
+
+[node name="Garlic5" type="TextureRect" parent="GarlicContainer" unique_id=864410363]
+layout_mode = 2
+texture = ExtResource("2_c7xwe")
