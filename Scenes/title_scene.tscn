@@ -1,14 +1,7 @@
 [gd_scene format=3 uid="uid://c8wvsi2ft8xgx"]
 
 [ext_resource type="Script" uid="uid://gjwtmig8u8si" path="res://Scenes/title_scene.gd" id="1_68ljo"]
-
-[sub_resource type="Gradient" id="Gradient_68ljo"]
-interpolation_mode = 1
-offsets = PackedFloat32Array(0)
-colors = PackedColorArray(0.908556, 0.8483721, 0.45921195, 1)
-
-[sub_resource type="GradientTexture1D" id="GradientTexture1D_glrdp"]
-gradient = SubResource("Gradient_68ljo")
+[ext_resource type="Texture2D" uid="uid://ba43kbq6qtk4j" path="res://Assets/1305909.jpeg" id="2_b6ftn"]
 
 [node name="TitleScreen" type="Node2D" unique_id=1678468492]
 script = ExtResource("1_68ljo")
@@ -17,8 +10,8 @@ script = ExtResource("1_68ljo")
 offset_top = -2.9999833
 offset_right = 670.72784
 offset_bottom = 515.05804
-scale = Vector2(1.7160462, 1.2624067)
-texture = SubResource("GradientTexture1D_glrdp")
+scale = Vector2(0.5975065, 0.59796095)
+texture = ExtResource("2_b6ftn")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=2069108597]
 clip_contents = false
